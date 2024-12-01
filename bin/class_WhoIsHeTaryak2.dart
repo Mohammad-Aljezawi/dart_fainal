@@ -1,9 +1,43 @@
-
+import 'dart:io';
+import 'dart_Fainal.dart';
 
 class WhoIsHeTaryak2 {
+  void Informationl(){
+    try{
+      
+      
+Introduction_to_the_team();
+links_team();
+Areas_of_volunteering();
+bool met =true;
+while(met){
+stdout.write("""
+ Enter "yes" to back :""");
+String choice =stdin.readLineSync()!.toLowerCase();
+
+if(choice == "yes"){
+main();
+}
+else{
+print("this value not valid, please enter valid input");
+Informationl();
+}
+}
+}
+catch(er){
+  print("$er");
+  Informationl();
+}
+
+}
+
+
+  
 
 void Introduction_to_the_team(){ // من هو الفريق و رؤيته و رسالته
-  print("""     Who is the Taryak team? 
+  print("""_________________________Introduction To The Team________________________
+
+  Who is the Taryak team? 
  A volunteer youth team at the College of Nursing from the Jordanian Technawi Youth Gathering || Tasharok
  in the Jordan University of Science and Technology, united by belonging to the homeland, 
  and working to build and advance the university, the student, the community, and the nation.
@@ -19,18 +53,22 @@ void Introduction_to_the_team(){ // من هو الفريق و رؤيته و رس
 }
 
 void links_team(){// قروبات الفريق
-  print("""   College groups (team)
-   Facebook link
-   Instagram link""");
+  print("""___________________links Team____________________________
+
+College groups (team)
+Facebook link :https://www.facebook.com/tryaqantidote?mibextid=ZbWKwL
+Instagram link :https://www.instagram.com/antidote_group?igsh=dGI3bzQwMnRjaHQ4
+""");
 
 }
 
 void Areas_of_volunteering(){
-  print("""The team volunteers in many things, including:
+  print(""" ____________________Areas Of Volunteering_____________________
+
+  The team volunteers in many things, including:
 * Eid clothing (Eid al-Fitr and Eid al-Adha)
 * Fasting breakfast
 * World Medicine Day
-*And many other things""");
+* And many other things""");
 }
-
 }
